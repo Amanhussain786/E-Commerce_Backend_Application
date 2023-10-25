@@ -48,5 +48,6 @@ Contributions to the E-Commerce Backend Application are welcome. If you find any
 
 ## Screenshot
 ![Swagger](https://github.com/Amanhussain786/E-Commerce_Backend_Application/assets/78783889/6ffe4d4f-c9f2-4012-8a25-3fd84e39bd4a)
+![Swagger2](https://github.com/Amanhussain786/E-Commerce_Backend_Application/assets/78783889/58e7b860-041e-4e9c-a657-e836c729f89a)
 
 

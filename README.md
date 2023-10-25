@@ -47,5 +47,6 @@ The E-commerce backend application built with Spring Boot enables users to brows
 Contributions to the E-Commerce Backend Application are welcome. If you find any issues or have suggestions for improvement, please create a new issue or submit a pull request.
 
 ## Screenshot
-![Screenshot](https://github.com/Amanhussain786/E-Commerce_Backend_Application/blob/master/Swagger.png)
+![Swagger](https://github.com/Amanhussain786/E-Commerce_Backend_Application/assets/78783889/6ffe4d4f-c9f2-4012-8a25-3fd84e39bd4a)
+
 

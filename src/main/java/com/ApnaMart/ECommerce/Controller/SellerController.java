@@ -3,6 +3,7 @@ package com.ApnaMart.ECommerce.Controller;
 import com.ApnaMart.ECommerce.Exception.SellerNotFoundException;
 import com.ApnaMart.ECommerce.Model.Seller;
 import com.ApnaMart.ECommerce.RequestDTO.SellerRequestDTO;
+import com.ApnaMart.ECommerce.ResponseDTO.SellerResponseDto;
 import com.ApnaMart.ECommerce.Service.SellerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,15 +32,23 @@ public class SellerController {
     }
 
     @GetMapping("/get_seller_by_panNo")
-    public Seller getSellerByPanNo(@RequestParam("panNo") String panNo)
+    public ResponseEntity<?> getSellerByPanNo(@RequestParam("panNo") String panNo)
     {
-        return sellerService.getSellerByPanNo(panNo);
+        SellerResponseDto sellerResponseDto;
+        try {
+           sellerResponseDto = sellerService.getSellerByPanNo(panNo);
+        }
+        catch (Exception e)
+        {
+            return new ResponseEntity<>("Invalid PAN Number !!",HttpStatus.NOT_FOUND);
+        }
+        return new ResponseEntity<>(sellerResponseDto,HttpStatus.ACCEPTED);
     }
 
     @GetMapping("/get_sellers_by_age")
-    public List<Seller> getSellersByAge(@RequestParam("age") int age)
+    public ResponseEntity<?> getSellersByAge(@RequestParam("age") int age)
     {
-        return sellerService.getSellersByAge(age);
+       return sellerService.getSellersByAge(age);
     }
 
     @DeleteMapping("delete_seller_by_id")
